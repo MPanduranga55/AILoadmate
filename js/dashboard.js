@@ -1,33 +1,33 @@
 // Dashboard data
 const availableLoads = [
     {
-      id: 1,
-      type: 'Full Truckload',
-      pickup: 'Mumbai, MH',
-      delivery: 'Delhi, DL',
-      date: 'Apr 10, 2023',
-      distance: 1415,
-      weight: '18 tonnes',
-      rate: '₹55,000',
-      matchScore: 96
+      id: 0,
+    type: 'Container',
+    pickup: 'Madurai, TN',
+    delivery: 'Chennai, TN',
+    date: 'Mar 30, 2025',
+    distance: 463,
+    weight: '20 tonnes',
+    rate: '₹35,000',
+    matchScore: 87
     },
     {
       id: 2,
       type: 'LTL',
       pickup: 'Bangalore, KA',
       delivery: 'Chennai, TN',
-      date: 'Apr 11, 2023',
-      distance: 350,
+      date: 'Apr 01, 2025',
+      distance: 1388,
       weight: '12 tonnes',
       rate: '₹22,000',
-      matchScore: 92
+      matchScore: 90
     },
     {
       id: 3,
       type: 'Container',
       pickup: 'Ahmedabad, GJ',
       delivery: 'Pune, MH',
-      date: 'Apr 12, 2023',
+      date: 'Apr 02, 2025',
       distance: 545,
       weight: '20 tonnes',
       rate: '₹35,000',
@@ -40,7 +40,7 @@ const availableLoads = [
       id: 1,
       pickup: 'Kolkata, WB',
       delivery: 'Hyderabad, TS',
-      deliveryDate: 'Apr 08, 2023',
+      date: 'Apr 20, 2025',
       status: 'In Transit',
       progress: 65
     },
@@ -48,7 +48,7 @@ const availableLoads = [
       id: 2,
       pickup: 'Jaipur, RJ',
       delivery: 'Lucknow, UP',
-      deliveryDate: 'Apr 14, 2023',
+      deliveryDate: 'Apr 29, 2023',
       status: 'Scheduled',
       progress: 0
     }
@@ -57,22 +57,22 @@ const availableLoads = [
   const recentPayments = [
     {
       id: 1,
-      date: 'Apr 02, 2023',
-      ref: 'PMT-2023-001',
+      date: 'Apr 01, 2025',
+      ref: 'PMT-2025-001',
       amount: '₹42,500',
       status: 'Completed'
     },
     {
       id: 2,
-      date: 'Mar 28, 2023',
+      date: 'Mar 28, 2025',
       ref: 'PMT-2023-002',
       amount: '₹38,750',
       status: 'Completed'
     },
     {
       id: 3,
-      date: 'Mar 22, 2023',
-      ref: 'PMT-2023-003',
+      date: 'Mar 22, 2025',
+      ref: 'PMT-2025-003',
       amount: '₹29,800',
       status: 'Completed'
     }
