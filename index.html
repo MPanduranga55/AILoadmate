@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>LoadMate AI - AI-Powered Freight Matching Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a href="#" class="navbar-logo">
+                    <svg class="freight-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 8H19C19.5523 8 20 7.55228 20 7V1C20 0.447715 19.5523 0 19 0H1C0.447715 0 0 0.447715 0 1V7C0 7.55228 0.447715 8 1 8Z" fill="currentColor" />
+                        <path d="M1 16H13C13.5523 16 14 15.5523 14 15V9C14 8.44772 13.5523 8 13 8H1C0.447715 8 0 8.44772 0 9V15C0 15.5523 0.447715 16 1 16Z" fill="currentColor" />
+                        <path d="M1 24H23C23.5523 24 24 23.5523 24 23V17C24 16.4477 23.5523 16 23 16H1C0.447715 16 0 16.4477 0 17V23C0 23.5523 0.447715 24 1 24Z" fill="currentColor" />
+                    </svg>
+                    <span>LoadMate AI</span>
+                </a>
+                <nav class="navbar-menu">
+                    <ul class="navbar-links">
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="navbar-actions">
+                    <button class="btn btn-ghost" id="loginBtn">Login</button>
+                    <button class="btn btn-primary">Sign Up</button>
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title animate-on-scroll">AI-Driven Freight Matching For Modern Logistics</h1>
+                    <p class="hero-subtitle animate-on-scroll stagger-delay-1">Our intelligent platform connects shippers with carriers more efficiently than ever before, using advanced AI to find the perfect match every time.</p>
+                    <div class="hero-actions animate-on-scroll stagger-delay-2">
+                        <button class="btn btn-primary btn-lg">Get Started</button>
+                        <button class="btn btn-outline btn-lg">Learn More</button>
+                    </div>
+                </div>
+                <div class="hero-visual animate-on-scroll stagger-delay-3">
+                    <div class="hero-image-container">
+                        <div class="freight-matcher">
+                            <h3>AI Freight Matcher</h3>
+                            <div class="matcher-results">
+                                <div class="matcher-result">
+                                    <div class="matcher-info">
+                                        <span class="company">TruckMasters Ltd</span>
+                                        <span class="details">485 km • ₹42,500</span>
+                                    </div>
+                                    <div class="match-score">96%</div>
+                                </div>
+                                <div class="matcher-result">
+                                    <div class="matcher-info">
+                                        <span class="company">SpeedyHaul Inc</span>
+                                        <span class="details">510 km • ₹45,800</span>
+                                    </div>
+                                    <div class="match-score">92%</div>
+                                </div>
+                                <div class="matcher-result">
+                                    <div class="matcher-info">
+                                        <span class="company">CargoConnect</span>
+                                        <span class="details">495 km • ₹43,900</span>
+                                    </div>
+                                    <div class="match-score">89%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Why Choose LoadMate AI?</h2>
+                <p class="section-subtitle animate-on-scroll stagger-delay-1">Our platform offers unparalleled advantages for both shippers and carriers</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card animate-on-scroll stagger-delay-1">
+                    <div class="benefit-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI-Powered Matching</h3>
+                    <p>Our advanced algorithms analyze thousands of variables to find the perfect match for your freight needs.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll stagger-delay-2">
+                    <div class="benefit-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Cost Efficiency</h3>
+                    <p>Save up to 30% on logistics costs through optimized routes and reduced empty miles.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll stagger-delay-3">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Time Saving</h3>
+                    <p>Reduce planning and coordination time by 75% with our automated matching system.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll stagger-delay-4">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Real-time Analytics</h3>
+                    <p>Track performance and optimize your operations with comprehensive data insights.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll stagger-delay-5">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Enhanced Security</h3>
+                    <p>Vetted carriers and secure transactions ensure your cargo moves safely from origin to destination.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll stagger-delay-6">
+                    <div class="benefit-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Eco-Friendly Solutions</h3>
+                    <p>Reduce carbon emissions by optimizing routes and minimizing empty trips.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Powerful Platform Features</h2>
+                <p class="section-subtitle animate-on-scroll stagger-delay-1">Revolutionize your logistics with our cutting-edge technology</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll stagger-delay-1">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Smart Matching</h3>
+                    <p>AI-powered algorithms match your freight with the most suitable carriers based on multiple factors.</p>
+                </div>
+                <div class="feature-card animate-on-scroll stagger-delay-2">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Route Optimization</h3>
+                    <p>Find the most efficient routes to minimize time, fuel consumption, and environmental impact.</p>
+                </div>
+                <div class="feature-card animate-on-scroll stagger-delay-3">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Digital Documentation</h3>
+                    <p>Manage all shipping documents electronically for a paperless, efficient process.</p>
+                </div>
+                <div class="feature-card animate-on-scroll stagger-delay-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Real-time Tracking</h3>
+                    <p>Monitor your shipments in real-time with accurate location data and status updates.</p>
+                </div>
+                <div class="feature-card animate-on-scroll stagger-delay-5">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Dynamic Pricing</h3>
+                    <p>Get competitive rates with our market-responsive pricing system updated in real-time.</p>
+                </div>
+                <div class="feature-card animate-on-scroll stagger-delay-6">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated support team is available around the clock to assist with any issues.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">How LoadMate AI Works</h2>
+                <p class="section-subtitle animate-on-scroll stagger-delay-1">Simple, efficient, and powerful freight matching in four easy steps</p>
+            </div>
+            <div class="steps">
+                <div class="step animate-on-scroll stagger-delay-1">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Register & Input Details</h3>
+                        <p>Create your account and enter your freight requirements or carrier capabilities.</p>
+                    </div>
+                </div>
+                <div class="step animate-on-scroll stagger-delay-2">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>AI Matches & Recommends</h3>
+                        <p>Our AI analyzes your needs and finds the perfect matches based on multiple factors.</p>
+                    </div>
+                </div>
+                <div class="step animate-on-scroll stagger-delay-3">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Review & Accept</h3>
+                        <p>Review the recommended matches and accept the one that best fits your requirements.</p>
+                    </div>
+                </div>
+                <div class="step animate-on-scroll stagger-delay-4">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Track & Optimize</h3>
+                        <p>Monitor your shipment in real-time and receive insights to optimize future operations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Truck Driver Section -->
+    <section class="truck-driver">
+        <div class="container">
+            <div class="truck-driver-content">
+                <div class="truck-driver-text">
+                    <h2 class="animate-on-scroll">Are You A Truck Driver?</h2>
+                    <p class="animate-on-scroll stagger-delay-1">Join thousands of truck drivers who are maximizing their earnings and minimizing empty miles with LoadMate AI.</p>
+                    <ul class="truck-driver-benefits">
+                        <li class="animate-on-scroll stagger-delay-2">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Find loads that match your route preferences</span>
+                        </li>
+                        <li class="animate-on-scroll stagger-delay-3">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Reduce empty miles and increase profitability</span>
+                        </li>
+                        <li class="animate-on-scroll stagger-delay-4">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Manage documentation electronically</span>
+                        </li>
+                        <li class="animate-on-scroll stagger-delay-5">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Get paid faster with our secure payment system</span>
+                        </li>
+                    </ul>
+                    <div class="truck-driver-action animate-on-scroll stagger-delay-6">
+                        <button class="btn btn-primary">Join as a Driver</button>
+                        <button class="btn btn-outline" id="driverLoginBtn">Driver Login</button>
+                    </div>
+                </div>
+                <div class="truck-driver-image animate-on-scroll stagger-delay-7">
+                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Truck Driver">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">What Our Customers Say</h2>
+                <p class="section-subtitle animate-on-scroll stagger-delay-1">Join thousands of satisfied users who are transforming their logistics operations</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-card animate-on-scroll stagger-delay-1">
+                    <div class="testimonial-content">
+                        <p>"LoadMate AI has revolutionized our logistics operations. We've reduced empty miles by 40% and increased our revenue by 25% in just three months."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Patel">
+                        <div>
+                            <h4>Rajesh Patel</h4>
+                            <p>Fleet Manager, SpeedyHaul Logistics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll stagger-delay-2">
+                    <div class="testimonial-content">
+                        <p>"As an independent driver, LoadMate AI has been a game-changer for me. I'm finding better loads and spending less time searching, which means more time driving and earning."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Sharma">
+                        <div>
+                            <h4>Priya Sharma</h4>
+                            <p>Independent Truck Driver</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll stagger-delay-3">
+                    <div class="testimonial-content">
+                        <p>"The AI-powered matching has improved our delivery times by 30%. Our customers are happier, and we're saving significantly on logistics costs."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Vikram Mehta">
+                        <div>
+                            <h4>Vikram Mehta</h4>
+                            <p>Supply Chain Director, GlobalTech Industries</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-navigation">
+                <button class="testimonial-nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="testimonial-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+                <button class="testimonial-nav-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-number">7500+</div>
+                    <div class="stat-label">Active Carriers</div>
+                </div>
+                <div class="stat-card animate-on-scroll stagger-delay-1">
+                    <div class="stat-number">12M+</div>
+                    <div class="stat-label">Kilometers Driven</div>
+                </div>
+                <div class="stat-card animate-on-scroll stagger-delay-2">
+                    <div class="stat-number">98.5%</div>
+                    <div class="stat-label">On-time Deliveries</div>
+                </div>
+                <div class="stat-card animate-on-scroll stagger-delay-3">
+                    <div class="stat-number">₹850M+</div>
+                    <div class="stat-label">Freight Value</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info animate-on-scroll">
+                    <h2>Get In Touch</h2>
+                    <p>We'd love to hear from you. Contact us with any questions about our platform.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Headquarters</h4>
+                                <p>123 Innovation Park, Bangalore, India 560001</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 80 1234 5678</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@loadmate.ai</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-container animate-on-scroll stagger-delay-1">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company (Optional)</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text animate-on-scroll">
+                    <h2>Stay Updated</h2>
+                    <p>Subscribe to our newsletter for the latest updates, industry trends, and exclusive offers.</p>
+                </div>
+                <form id="newsletterForm" class="newsletter-form animate-on-scroll stagger-delay-1">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <svg class="freight-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 8H19C19.5523 8 20 7.55228 20 7V1C20 0.447715 19.5523 0 19 0H1C0.447715 0 0 0.447715 0 1V7C0 7.55228 0.447715 8 1 8Z" fill="currentColor" />
+                            <path d="M1 16H13C13.5523 16 14 15.5523 14 15V9C14 8.44772 13.5523 8 13 8H1C0.447715 8 0 8.44772 0 9V15C0 15.5523 0.447715 16 1 16Z" fill="currentColor" />
+                            <path d="M1 24H23C23.5523 24 24 23.5523 24 23V17C24 16.4477 23.5523 16 23 16H1C0.447715 16 0 16.4477 0 17V23C0 23.5523 0.447715 24 1 24Z" fill="currentColor" />
+                        </svg>
+                        <span>LoadMate AI</span>
+                    </a>
+                    <p>AI-powered freight matching platform revolutionizing the logistics industry.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3>Solutions</h3>
+                        <ul>
+                            <li><a href="#">For Shippers</a></li>
+                            <li><a href="#">For Carriers</a></li>
+                            <li><a href="#">For Drivers</a></li>
+                            <li><a href="#">Enterprise</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Documentation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Compliance</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 LoadMate AI. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Login to LoadMate AI</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-tabs">
+                <button class="tab-btn active" data-tab="user">User Login</button>
+                <button class="tab-btn" data-tab="driver">Driver Login</button>
+            </div>
+            <div class="modal-body">
+                <form id="userLoginForm" class="login-form active" data-form="user">
+                    <div class="form-group">
+                        <label for="userUsername">Username</label>
+                        <input type="text" id="userUsername" name="username" autocomplete="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userPassword">Password</label>
+                        <input type="password" id="userPassword" name="password" autocomplete="current-password" required>
+                    </div>
+                    <div class="form-actions">
+                        <div class="remember-me">
+                            <input type="checkbox" id="userRemember">
+                            <label for="userRemember">Remember me</label>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    <button type="button" class="btn btn-outline btn-block">Demo Access</button>
+                    <div class="login-separator">
+                        <span>Or</span>
+                    </div>
+                    <div class="social-login">
+                        <button type="button" class="btn btn-social btn-google">
+                            <i class="fab fa-google"></i> Continue with Google
+                        </button>
+                        <button type="button" class="btn btn-social btn-facebook">
+                            <i class="fab fa-facebook-f"></i> Continue with Facebook
+                        </button>
+                    </div>
+                </form>
+                <form id="driverLoginForm" class="login-form" data-form="driver">
+                    <div class="form-group">
+                        <label for="driverUsername">Driver ID</label>
+                        <input type="text" id="driverUsername" name="username" autocomplete="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="driverPassword">Password</label>
+                        <input type="password" id="driverPassword" name="password" autocomplete="current-password" required>
+                    </div>
+                    <div class="form-actions">
+                        <div class="remember-me">
+                            <input type="checkbox" id="driverRemember">
+                            <label for="driverRemember">Remember me</label>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    <button type="button" class="btn btn-outline btn-block">Demo Access</button>
+                    <div class="login-note">
+                        <p>If you're a truck driver and don't have an account, please 
+                            <a href="#" class="text-primary">register here</a>.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

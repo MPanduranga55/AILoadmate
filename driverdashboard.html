@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Driver Dashboard - LoadMate AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-logo">
+                <a href="index.html" class="navbar-logo">
+                    <svg class="freight-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 8H19C19.5523 8 20 7.55228 20 7V1C20 0.447715 19.5523 0 19 0H1C0.447715 0 0 0.447715 0 1V7C0 7.55228 0.447715 8 1 8Z" fill="currentColor" />
+                        <path d="M1 16H13C13.5523 16 14 15.5523 14 15V9C14 8.44772 13.5523 8 13 8H1C0.447715 8 0 8.44772 0 9V15C0 15.5523 0.447715 16 1 16Z" fill="currentColor" />
+                        <path d="M1 24H23C23.5523 24 24 23.5523 24 23V17C24 16.4477 23.5523 16 23 16H1C0.447715 16 0 16.4477 0 17V23C0 23.5523 0.447715 24 1 24Z" fill="currentColor" />
+                    </svg>
+                    <span>LoadMate AI</span>
+                </a>
+            </div>
+            <div class="header-actions">
+                <div class="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                <div class="user-profile">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rajesh" alt="Rajesh Kumar" class="avatar">
+                    <div class="user-info">
+                        <p class="user-name">Rajesh Kumar</p>
+                        <p class="user-role">Professional Driver</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard-content">
+            <!-- Sidebar -->
+            <aside class="dashboard-sidebar">
+                <nav class="sidebar-nav">
+                    <a href="#" class="nav-item active" id="dashboard-tab">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#" class="nav-item" id="loads-tab">
+                        <i class="fas fa-box-open"></i>
+                        <span>Available Loads</span>
+                    </a>
+                    <a href="#" class="nav-item" id="deliveries-tab">
+                        <i class="fas fa-truck"></i>
+                        <span>My Deliveries</span>
+                    </a>
+                    <a href="#" class="nav-item" id="payments-tab">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span>Payments</span>
+                    </a>
+                    <a href="#" class="nav-item" id="route-tab">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Route Planning</span>
+                    </a>
+                    <a href="#" class="nav-item" id="schedule-tab">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Schedule</span>
+                    </a>
+                    <a href="#" class="nav-item" id="history-tab">
+                        <i class="fas fa-history"></i>
+                        <span>History</span>
+                    </a>
+                    <div class="sidebar-divider"></div>
+                    <a href="#" class="nav-item" id="profile-tab">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                    <a href="#" class="nav-item" id="settings-tab">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                    <a href="index.html" class="nav-item">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Sign Out</span>
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="dashboard-main">
+                <div class="tab-content active" id="dashboard-content">
+                    <h1 class="page-title">Driver Dashboard</h1>
+                    
+                    <!-- Stats Cards -->
+                    <div class="stats-cards">
+                        <div class="stat-card slide-in-left">
+                            <div class="stat-header">
+                                <h3>Weekly Earnings</h3>
+                                <div class="stat-value">₹35,850</div>
+                            </div>
+                            <div class="stat-footer">
+                                <div class="stat-change positive">↑ 12% from last week</div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card fade-in">
+                            <div class="stat-header">
+                                <h3>Kilometers Driven</h3>
+                                <div class="stat-value">4,092</div>
+                            </div>
+                            <div class="stat-footer">
+                                <div class="stat-change positive">↑ 5% from last week</div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card slide-in-right">
+                            <div class="stat-header">
+                                <h3>Load Offers</h3>
+                                <div class="stat-value">24</div>
+                            </div>
+                            <div class="stat-footer">
+                                <div class="stat-change neutral">8 new offers today</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Main Content Grid -->
+                    <div class="dashboard-grid">
+                        <!-- Top Match Loads -->
+                        <div class="dashboard-card loads-card">
+                            <div class="card-header">
+                                <h2>Top Match Loads</h2>
+                                <p>AI-curated loads based on your preferences and history</p>
+                            </div>
+                            <div class="card-content">
+                                <div class="load-list">
+                                    <!-- Load items will be populated from JavaScript -->
+                                </div>
+                                <div class="card-action">
+                                    <button class="btn btn-ghost" id="view-all-loads">View All Available Loads</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Active Deliveries -->
+                        <div class="dashboard-card deliveries-card">
+                            <div class="card-header">
+                                <h2>Active Deliveries</h2>
+                                <p>Your current and upcoming trips</p>
+                            </div>
+                            <div class="card-content">
+                                <div class="delivery-list">
+                                    <!-- Delivery items will be populated from JavaScript -->
+                                </div>
+                                <div class="card-action">
+                                    <button class="btn btn-ghost" id="view-all-deliveries">View All Deliveries</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Recent Payments -->
+                        <div class="dashboard-card payments-card">
+                            <div class="card-header">
+                                <h2>Recent Payments</h2>
+                                <p>Your payment history for completed deliveries</p>
+                            </div>
+                            <div class="card-content">
+                                <div class="payment-list">
+                                    <!-- Payment items will be populated from JavaScript -->
+                                </div>
+                                <div class="card-action">
+                                    <button class="btn btn-ghost" id="view-all-payments">View All Payments</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Performance Metrics -->
+                        <div class="dashboard-card metrics-card">
+                            <div class="card-header">
+                                <h2>Performance Metrics</h2>
+                                <p>Your driver performance stats</p>
+                            </div>
+                            <div class="card-content">
+                                <div class="metrics">
+                                    <div class="metric-item">
+                                        <div class="metric-header">
+                                            <span>On-Time Delivery</span>
+                                            <span>98%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 98%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="metric-item">
+                                        <div class="metric-header">
+                                            <span>Customer Satisfaction</span>
+                                            <span>4.9/5</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 97%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="metric-item">
+                                        <div class="metric-header">
+                                            <span>Documentation Accuracy</span>
+                                            <span>100%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 100%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="metric-item">
+                                        <div class="metric-header">
+                                            <span>Fuel Efficiency</span>
+                                            <span>92%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 92%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Route Planning Tab -->
+                <div class="tab-content" id="route-content">
+                    <h1 class="page-title">Route Planning</h1>
+                    
+                    <div class="route-planning-container">
+                        <div class="route-form-container">
+                            <form id="route-form" class="route-form">
+                                <div class="form-group">
+                                    <label for="origin">Origin</label>
+                                    <input type="text" id="origin" name="origin" value="Mumbai, Maharashtra" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="destination">Destination</label>
+                                    <input type="text" id="destination" name="destination" value="Delhi, New Delhi" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="via">Via (Optional)</label>
+                                    <input type="text" id="via" name="via" placeholder="Add waypoint">
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group half">
+                                        <label for="departure-date">Departure Date</label>
+                                        <input type="date" id="departure-date" name="departure-date" value="2023-04-10">
+                                    </div>
+                                    
+                                    <div class="form-group half">
+                                        <label for="departure-time">Departure Time</label>
+                                        <input type="time" id="departure-time" name="departure-time" value="08:00">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Optimization Priority</label>
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="radio" name="optimization" value="fastest" checked>
+                                            <span>Fastest Route</span>
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="radio" name="optimization" value="shortest">
+                                            <span>Shortest Distance</span>
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="radio" name="optimization" value="economical">
+                                            <span>Most Economical</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-block">Calculate Route</button>
+                            </form>
+                        </div>
+                        
+                        <div class="route-map-container">
+                            <div class="route-map">
+                                <img src="https://i.imgur.com/RsPpHI2.png" alt="Route Map" class="map-image">
+                            </div>
+                            
+                            <div class="route-details">
+                                <div class="route-summary">
+                                    <div class="summary-item">
+                                        <i class="fas fa-road"></i>
+                                        <div>
+                                            <h4>Distance</h4>
+                                            <p>1,415 km</p>
+                                        </div>
+                                    </div>
+                                    <div class="summary-item">
+                                        <i class="fas fa-clock"></i>
+                                        <div>
+                                            <h4>Duration</h4>
+                                            <p>21 hours 30 minutes</p>
+                                        </div>
+                                    </div>
+                                    <div class="summary-item">
+                                        <i class="fas fa-gas-pump"></i>
+                                        <div>
+                                            <h4>Fuel Estimate</h4>
+                                            <p>~283 liters</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="route-footer">
+                                    <div class="route-powered-by">
+                                        Powered by LoadMate AI Route Optimization
+                                    </div>
+                                    <button class="btn btn-outline">Get Turn-by-Turn Directions</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other tabs would be added here, but hidden by default -->
+                <div class="tab-content" id="loads-content">
+                    <h1 class="page-title">Available Loads</h1>
+                    <p>Content under development...</p>
+                </div>
+                
+                <div class="tab-content" id="deliveries-content">
+                    <h1 class="page-title">My Deliveries</h1>
+                    <p>Content under development...</p>
+                </div>
+                
+                <div class="tab-content" id="payments-content">
+                    <h1 class="page-title">Payments</h1>
+                    <p>Content under development...</p>
+                </div>
+                
+                <div class="tab-content" id="schedule-content">
+                    <h1 class="page-title">Schedule</h1>
+                    <p>Content under development...</p>
+                </div>
+                
+                <div class="tab-content" id="history-content">
+                    <h1 class="page-title">History</h1>
+                    <p>Content under development...</p>
+                </div>
+                
+                <div class="tab-content" id="profile-content">
+                    <h1 class="page-title">Profile</h1>
+                    
+                    <div class="profile-container">
+                        <div class="profile-header">
+                            <div class="profile-image">
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rajesh" alt="Rajesh Kumar">
+                            </div>
+                            <div class="profile-info">
+                                <h2>Rajesh Kumar</h2>
+                                <p>Professional Driver</p>
+                                <div class="profile-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span>4.9/5 (142 reviews)</span>
+                                </div>
+                            </div>
+                            <div class="profile-actions">
+                                <button class="btn btn-outline">Edit Profile</button>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-details">
+                            <div class="profile-section">
+                                <h3>Personal Information</h3>
+                                <div class="profile-fields">
+                                    <div class="profile-field">
+                                        <label>Full Name</label>
+                                        <p>Rajesh Kumar</p>
+                                    </div>
+                                    <div class="profile-field">
+                                        <label>Driver ID</label>
+                                        <p>DRV-IN-12587</p>
+                                    </div>
+                                    <div class="profile-field">
+                                        <label>Email</label>
+                                        <p>rajesh.kumar@example.com</p>
+                                    </div>
+                                    <div class="profile-field">
+                                        <label>Phone</label>
+                                        <p>+91 98765 43210</p>
+                                    </div>
+                                    <div class="profile-field">
+                                        <label>Location</label>
+                                        <p>Mumbai, Maharashtra</p>
+                                    </div>
+                                    <div class="profile-field">
+                                        <label>Joined</label>
+                                        <p>January 15, 2022</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-section">
+                                <h3>Vehicle Information</h3>
+                                <div class="profile-fields">
+                                    <div class="profile-field">
+                                        <label>Vehicle Type</label>
+                                        <p>30ft Container Truck</p>
+                                    </div>
+                                    <div class="profile-field">
+                                        <label>Registration</label>
+                                        <p>MH 01 AB 1234</p>
+                                    </div>
+                                    <div class="profile-field">
+                                        <label>Make & Model</label>
+                                        <p>Tata Prima 2823.K</p>
+                                    </div>
+                                    <div class="profile-field">
+                                        <label>Year</label>
+                                        <p>2021</p>
+                                    </div>
+                                    <div class="profile-field">
+                                        <label>Capacity</label>
+                                        <p>25 tonnes</p>
+                                    </div>
+                                    <div class="profile-field">
+                                        <label>Fuel Type</label>
+                                        <p>Diesel</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-section">
+                                <h3>Documents</h3>
+                                <div class="documents-list">
+                                    <div class="document-item">
+                                        <div class="document-icon">
+                                            <i class="fas fa-id-card"></i>
+                                        </div>
+                                        <div class="document-info">
+                                            <h4>Driver's License</h4>
+                                            <p>Valid until: 12/25/2026</p>
+                                        </div>
+                                        <div class="document-status verified">
+                                            <i class="fas fa-check-circle"></i> Verified
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="document-item">
+                                        <div class="document-icon">
+                                            <i class="fas fa-truck"></i>
+                                        </div>
+                                        <div class="document-info">
+                                            <h4>Commercial Vehicle Permit</h4>
+                                            <p>Valid until: 08/14/2024</p>
+                                        </div>
+                                        <div class="document-status verified">
+                                            <i class="fas fa-check-circle"></i> Verified
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="document-item">
+                                        <div class="document-icon">
+                                            <i class="fas fa-file-contract"></i>
+                                        </div>
+                                        <div class="document-info">
+                                            <h4>Insurance Certificate</h4>
+                                            <p>Valid until: 05/30/2023</p>
+                                        </div>
+                                        <div class="document-status warning">
+                                            <i class="fas fa-exclamation-circle"></i> Expiring Soon
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="document-item">
+                                        <div class="document-icon">
+                                            <i class="fas fa-certificate"></i>
+                                        </div>
+                                        <div class="document-info">
+                                            <h4>Pollution Certificate</h4>
+                                            <p>Valid until: 11/10/2023</p>
+                                        </div>
+                                        <div class="document-status verified">
+                                            <i class="fas fa-check-circle"></i> Verified
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-section">
+                                <h3>Preferences</h3>
+                                <div class="preferences">
+                                    <div class="preference-item">
+                                        <label>Preferred Route Areas</label>
+                                        <div class="tags">
+                                            <span class="tag">West India</span>
+                                            <span class="tag">North India</span>
+                                            <span class="tag">Central India</span>
+                                        </div>
+                                    </div>
+                                    <div class="preference-item">
+                                        <label>Cargo Specialties</label>
+                                        <div class="tags">
+                                            <span class="tag">Packaged Goods</span>
+                                            <span class="tag">Electronics</span>
+                                            <span class="tag">FMCG</span>
+                                            <span class="tag">Industrial Equipment</span>
+                                        </div>
+                                    </div>
+                                    <div class="preference-item">
+                                        <label>Maximum Trip Duration</label>
+                                        <p>7 Days</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="settings-content">
+                    <h1 class="page-title">Settings</h1>
+                    <p>Content under development...</p>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
